@@ -1,4 +1,5 @@
 # Mocha-Interpreter
+
 **An interpreter language written in go**
 
 Mocha is a programming language that is implmented with Go.
@@ -16,3 +17,7 @@ Mocha has/is planned to have the following features:
 - [ ] An array data structure
 - [ ] A hash data structure
 - [ ] Attach line number, column number and filename to a token
+- [ ] Support full unicode range
+- [ ] Allow ! in identifiers and keywords
+- [ ] Support Floats / Hex Notation / Octal Notation
+- [ ] Comparators e.g. AND OR NOT
