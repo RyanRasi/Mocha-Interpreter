@@ -15,3 +15,4 @@ Mocha has/is planned to have the following features:
 - [ ] A string data structure
 - [ ] An array data structure
 - [ ] A hash data structure
+- [ ] Attach line number, column number and filename to a token
