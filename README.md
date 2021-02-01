@@ -21,3 +21,7 @@ Mocha has/is planned to have the following features:
 - [ ] Allow ! in identifiers and keywords
 - [ ] Support Floats / Hex Notation / Octal Notation
 - [ ] Comparators e.g. AND OR NOT
+- [ ] Add instant web server
+- [ ] Add file extension
+- [ ] If/Elif/else statements
+- [ ] Switch case statements
