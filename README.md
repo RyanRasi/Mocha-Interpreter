@@ -22,6 +22,8 @@ Mocha has/is planned to have the following features:
 - [ ] Support Floats / Hex Notation / Octal Notation
 - [ ] Comparators e.g. AND OR NOT
 - [ ] Add instant web server
-- [ ] Add file extension
+- [ ] Add .mocha file extension support
 - [ ] If/Elif/else statements
 - [ ] Switch case statements
+- [ ] Postfix operators (e.g. ++)
+- [ ] Built-in library
