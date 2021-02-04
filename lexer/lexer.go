@@ -128,7 +128,7 @@ func (l *Lexer) readNumber() string {
 
 func isLetter(ch byte) bool {
 	//Allowed Symbols in identifiers and keywords
-	return 'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z' || ch == '_' || ch == '!'
+	return 'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z' || ch == '_' || ch == '?'
 }
 
 func isDigit(ch byte) bool {
