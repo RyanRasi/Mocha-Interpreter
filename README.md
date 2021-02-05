@@ -4,6 +4,8 @@
 
 Mocha is a programming language that is implmented with Go.
 
+Currently Work In Progress.
+
 Mocha has/is planned to have the following features:
 
 - [ ] C-like syntax
