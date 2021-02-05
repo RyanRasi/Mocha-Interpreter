@@ -23,7 +23,10 @@ Mocha has/is planned to have the following features:
 - [ ] Comparators e.g. AND OR NOT
 - [ ] Add instant web server
 - [ ] Add .mocha file extension support
-- [ ] If/Elif/else statements
+- [ ] If statements
+- [ ] Else statements
+- [ ] Elif statements
 - [ ] Switch case statements
 - [ ] Postfix operators (e.g. ++)
 - [ ] Built-in library
+- [ ] True integer division support
