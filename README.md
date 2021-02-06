@@ -8,16 +8,16 @@ Currently Work In Progress.
 
 Mocha has/is planned to have the following features:
 
-- [ ] C-like syntax
-- [ ] Variable bindings
-- [ ] Integers and booleans
-- [ ] Arithmetic expressions
-- [ ] Built-in functions
-- [ ] First-class and higher-order functions
-- [ ] Closures
-- [ ] A string data structure
-- [ ] An array data structure
-- [ ] A hash data structure
+- [x] C-like syntax
+- [x] Variable bindings
+- [x] Integers and booleans
+- [x] Arithmetic expressions
+- [x] Built-in functions
+- [x] First-class and higher-order functions
+- [x] Closures
+- [x] A string data structure
+- [x] An array data structure
+- [x] A hash data structure
 - [ ] Attach line number, column number and filename to a token
 - [ ] Support full unicode range
 - [ ] Allow ! in identifiers and keywords
@@ -25,10 +25,15 @@ Mocha has/is planned to have the following features:
 - [ ] Comparators e.g. AND OR NOT
 - [ ] Add instant web server
 - [ ] Add .mocha file extension support
-- [ ] If statements
-- [ ] Else statements
+- [x] If statements
+- [x] Else statements
 - [ ] Elif statements
+- [x] Arrays
+- [x] Array Literals
+- [ ] For loop
+- [ ] Do while loop
 - [ ] Switch case statements
 - [ ] Postfix operators (e.g. ++)
 - [ ] Built-in library
 - [ ] True integer division support
+- [x] Hash Map/Dictionary
