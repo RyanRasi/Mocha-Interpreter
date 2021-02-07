@@ -58,7 +58,7 @@ func main() {
 		}
 	}
 
-	fmt.Printf("Hello %s! This is the .Mocha programming language!\n",
+	fmt.Printf("Hello %s! Welcome to the .Mocha programming language!\n",
 		strings.ToUpper(user.Username))
 
 	fmt.Printf("The current date is:   %s! The %s of %s %s\nThe time is currently: %s\n\n",
@@ -67,5 +67,3 @@ func main() {
 	fmt.Printf("Feel free to type in commands\n")
 	repl.Start(os.Stdin, os.Stdout)
 }
-
-//Page 38
