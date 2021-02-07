@@ -2,15 +2,14 @@ package token
 
 type TokenType string
 
-//Strings are easy to debug
-
 const (
 	ILLEGAL = "ILLEGAL"
 	EOF     = "EOF"
 
 	// Identifiers + literals
-	IDENT = "IDENT" // add, foobar, x, y, ...
-	INT   = "INT"   // 1343456
+	IDENT  = "IDENT"  // add, foobar, x, y, ...
+	INT    = "INT"    // 1343456
+	STRING = "STRING" // "foobar"
 
 	// Operators
 	ASSIGN   = "="
@@ -29,11 +28,14 @@ const (
 	// Delimiters
 	COMMA     = ","
 	SEMICOLON = ";"
+	COLON     = ":"
 
-	LPAREN = "("
-	RPAREN = ")"
-	LBRACE = "{"
-	RBRACE = "}"
+	LPAREN   = "("
+	RPAREN   = ")"
+	LBRACE   = "{"
+	RBRACE   = "}"
+	LBRACKET = "["
+	RBRACKET = "]"
 
 	// Keywords
 	FUNCTION = "FUNCTION"
@@ -51,7 +53,6 @@ type Token struct {
 }
 
 var keywords = map[string]TokenType{
-	//Returns the correct TokenType for special statements
 	"fn":     FUNCTION,
 	"let":    LET,
 	"true":   TRUE,
@@ -62,7 +63,6 @@ var keywords = map[string]TokenType{
 }
 
 func LookupIdent(ident string) TokenType {
-	//Checks the keywords to see whether the identifier is a keyword
 	if tok, ok := keywords[ident]; ok {
 		return tok
 	}
