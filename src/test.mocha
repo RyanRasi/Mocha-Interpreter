@@ -1,0 +1,3 @@
+consoleOut("Hello World!")
+5+5
+add(1,2,3,4,5)
