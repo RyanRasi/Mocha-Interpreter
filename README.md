@@ -24,7 +24,7 @@ Mocha has/is planned to have the following features:
 - [ ] Support Floats / Hex Notation / Octal Notation
 - [ ] Comparators e.g. AND OR NOT
 - [ ] Add instant web server
-- [ ] Add .mocha file extension support
+- [x] Add .mocha file extension support
 - [x] If statements
 - [x] Else statements
 - [ ] Elif statements
@@ -34,6 +34,20 @@ Mocha has/is planned to have the following features:
 - [ ] Do while loop
 - [ ] Switch case statements
 - [ ] Postfix operators (e.g. ++)
-- [ ] Built-in library
+- [x] Built-in library
 - [ ] True integer division support
 - [x] Hash Map/Dictionary
+
+To run the IDE do...
+
+```
+go run main.go
+```
+
+Else to load a programming file do...
+
+```
+go run main.go test.mocha
+```
+
+Replace test.mocha with your created file and place it within the src folder
