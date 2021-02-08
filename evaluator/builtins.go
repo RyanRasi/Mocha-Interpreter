@@ -4,6 +4,7 @@ import (
 	"../object"
 	"fmt"
 	//"sort"
+	"os"
 	"strconv"
 )
 
@@ -187,6 +188,26 @@ var builtins = map[string]*object.Builtin{
 				}
 			}
 			return &object.Integer{Value: int64(addition)}
+		},
+	},
+	"help": &object.Builtin{
+		Fn: func(args ...object.Object) object.Object {
+			if len(args) != 0 {
+				return newError("wrong number of arguments. got=%d, want=none",
+					len(args))
+			}
+			return &object.String{Value: ("For additional help please access the gitHub repository at https://github.com/ryanrasi/mocha-interpreter")}
+		},
+	},
+	"exit": &object.Builtin{
+		Fn: func(args ...object.Object) object.Object {
+			if len(args) != 0 {
+				return newError("wrong number of arguments. got=%d, want=none",
+					len(args))
+			}
+			fmt.Println("Program exited - Exit code 0")
+			os.Exit(0)
+			return NULL
 		},
 	},
 }
