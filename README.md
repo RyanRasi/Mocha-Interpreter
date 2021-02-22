@@ -52,3 +52,33 @@ go run main.go test.mocha
 ```
 
 Replace test.mocha with your created file and place it within the src folder
+
+#Built In Functions
+
+Output to console
+
+```
+consoleOut("String or variable");
+```
+
+Arrays
+
+```
+first(); - Get the first element of array
+last(); - Get the last element of array
+rest(); - Get all elements of an array excluding the first element
+push('String or Integer', Array); - Append an element to the end of an array
+sort(); - Sorts an array in decending order
+```
+
+Math Statements
+
+```
+add(); - Add multiple integers together
+```
+
+help(); - Displays help commands
+
+```
+exit(); - Exits the program safely
+```
