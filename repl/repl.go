@@ -2,6 +2,7 @@ package repl
 
 import (
 	"../evaluator"
+	"../formatter"
 	"../lexer"
 	"../object"
 	"../parser"
@@ -23,7 +24,7 @@ func Start(in io.Reader, out io.Writer) {
 	if len(input_files) < 1 {
 		fmt.Println("Not detected any input files.")
 	} else {
-		fmt.Println("File_name is: ", input_files[0], "\n")
+		fmt.Println("File name is: ", input_files[0], "\n")
 		fileLocation = fileLocation + input_files[0]
 	}
 
@@ -37,24 +38,35 @@ func Start(in io.Reader, out io.Writer) {
 			log.Fatal(err)
 		}
 		defer file.Close()
-		scanner := bufio.NewScanner(file) //For every file, increment the base lines variable
+		scanner := bufio.NewScanner(file) //For every line within the txt
+		unformattedText, formattedText := "", ""
 		for scanner.Scan() {
-			line := scanner.Text()
-			l := lexer.New(line)
-			p := parser.New(l)
-
-			program := p.ParseProgram()
-			if len(p.Errors()) != 0 {
-				printParserErrors(out, p.Errors())
-				continue
-			}
-
-			evaluated := evaluator.Eval(program, env)
-			if evaluated != nil {
-				io.WriteString(out, evaluated.Inspect())
-				io.WriteString(out, "\n")
-			}
+			//if strings.HasSuffix(scanner.Text(), "{") {
+			//} else if strings.HasSuffix(scanner.Text(), "}") {
+			//} else if strings.HasSuffix(scanner.Text(), ";") {
+			//	else {
+			//
+			//				}
+			unformattedText = unformattedText + scanner.Text() + "\n"
 		}
+		formattedText = formatter.FormatInput(unformattedText, input_files[0])
+		//formattedText = strings.Replace(unformattedText, "\n", "", -1)
+		//Format the text and save it
+
+		l := lexer.New(formattedText)
+		p := parser.New(l)
+
+		program := p.ParseProgram()
+		if len(p.Errors()) != 0 {
+			printParserErrors(out, p.Errors())
+		}
+
+		evaluated := evaluator.Eval(program, env)
+		if evaluated != nil {
+			io.WriteString(out, evaluated.Inspect())
+			io.WriteString(out, "\n")
+		}
+
 	} else {
 
 		for {

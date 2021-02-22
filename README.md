@@ -37,7 +37,7 @@ Mocha has/is planned to have the following features:
 - [x] Built-in library
 - [ ] True integer division support
 - [x] Hash Map/Dictionary
-- [ ] All statements end with ; except {}(), automatic formatting
+- [x] Automatic formatting of custom user files on run
 
 To run the IDE do...
 
