@@ -77,7 +77,14 @@ Math Statements
 add(); - Add multiple integers together
 ```
 
+```
+random(int1, int2); - Returns a random INT between the two INT arguments
+```
+
+```
 help(); - Displays help commands
+
+```
 
 ```
 exit(); - Exits the program safely
