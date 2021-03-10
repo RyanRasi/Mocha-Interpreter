@@ -1,3 +1,20 @@
-consoleOut("Hello World!")
-5+5
-add(1,2,3,4,5)
+if (5<10) {
+    consoleOut("false")consoleOut("false");
+    } elif (5<7) {
+    consoleOut("true");
+    } else {
+      consoleOut("False);
+    }
+
+let five = 5;
+
+let ten = 10;
+
+   let add = fn(x, y) {
+     x + y;
+}
+
+let result = add(five, ten);
+consoleOut(result);
+
+consoleOut("test");
