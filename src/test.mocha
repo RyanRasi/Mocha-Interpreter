@@ -1,9 +1,7 @@
 if (5<10) {
-    consoleOut("false")consoleOut("false");
-    } elif (5<7) {
-    consoleOut("true");
+    consoleOut("false");
     } else {
-      consoleOut("False);
+      consoleOut("False");
     }
 
 let five = 5;
